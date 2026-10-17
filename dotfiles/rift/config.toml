@@ -1,0 +1,56 @@
+
+[settings]
+animate = true
+animation_duration = 0.15
+animation_fps = 120.0
+animation_easing = "ease_out_cubic"
+# Control whether Rift starts with window management disabled.
+default_disable = false
+
+# Automatically focus the window under the mouse cursor when moving the mouse.
+focus_follows_mouse = false
+# Automatically move the mouse cursor to the newly focused window when switching
+# focus via keyboard.
+mouse_follows_focus = false
+mouse_hides_on_focus = true
+
+[settings.layout]
+mode = "master_stack"
+
+[settings.layout.master_stack]
+new_window_placement = "stack"
+
+[settings.layout.gaps]
+inner = { horizontal = 0, vertical = 0 }
+outer = { top = 0, bottom = 0, left = 0, right = 0 }
+
+[settings.ui.menu_bar]
+enabled = false
+mode = "all"
+show_empty = false
+active_label = "name"
+display_style = "label"
+
+[keys]
+# Window management
+"Alt + Z" = "toggle_space_activated"
+"Alt + Tab" = "switch_to_last_workspace"
+"Alt + Shift + Space" = "toggle_window_floating"
+
+# Applications
+"Cmd + Enter" = { exec = ["open", "-a", "Alacritty"] }
+"Cmd + Shift + Enter" = { exec = ["open", "-a", "Finder"] }
+"Cmd + Shift + C" = { exec = ["open", "-a", "Zed"] }
+"Cmd + Shift + F" = { exec = ["open", "-a", "Firefox"] }
+"Cmd + Shift + G" = { exec = ["open", "-a", "Google Chrome"] }
+"Cmd + Shift + S" = { exec = ["open", "-a", "Spotify"] }
+
+"Alt + Space" = { exec = [
+  "open",
+  "-a",
+  "Firefox",
+  "https://chatgpt.com/?temporary-chat=true",
+] }
+
+# Override macOS shortcuts
+"Meta + H" = { exec = ["true"] }

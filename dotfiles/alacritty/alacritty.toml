@@ -1,0 +1,64 @@
+[window]
+decorations = "Full"
+padding = { x = 14, y = 12 }
+dynamic_padding = true
+
+[font]
+size = 12
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+offset = { x = 0, y = 1 }
+
+[cursor]
+unfocused_hollow = true
+thickness = 0.15
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 600
+
+[selection]
+save_to_clipboard = true
+
+[scrolling]
+history = 10000
+
+[colors.primary]
+background = "#1E1E2E"
+foreground = "#D8DEE9"
+
+[colors.selection]
+text = "CellForeground"
+background = "#45475A"
+
+[colors.cursor]
+text = "#1E1E2E"
+cursor = "#88C0D0"
+
+[colors.search.matches]
+foreground = "#2E3440"
+background = "#EBCB8B"
+
+[colors.search.focused_match]
+foreground = "#2E3440"
+background = "#A3BE8C"
+
+[colors.normal]
+black = "#2E3440"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+blue = "#81A1C1"
+magenta = "#B48EAD"
+cyan = "#88C0D0"
+white = "#D8DEE9"
+
+[colors.bright]
+black = "#434C5E"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+blue = "#5E81AC"
+magenta = "#B48EAD"
+cyan = "#88C0D0"
+white = "#D8DEE9"
