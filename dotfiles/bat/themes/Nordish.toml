@@ -1,0 +1,60 @@
+# NOTE: `bat` uses PLIST as it's config file format, but I prefer TOML. So `nix`
+#       will have to translate this file first.
+
+name = "Nordish"
+uuid = "f8c6f10b-caa2-4dec-a3ed-9bba39d49b88"
+
+[[settings]]
+[settings.settings]
+background = "#1E1E2E"
+foreground = "#D8DEE9"
+caret = "#88C0D0"
+selection = "#45475A"
+lineHighlight = "#2E3440"
+
+[[settings]]
+scope = "comment, punctuation.definition.comment"
+[settings.settings]
+foreground = "#616E88"
+fontStyle = "italic"
+
+[[settings]]
+scope = "string, constant.other.symbol"
+[settings.settings]
+foreground = "#A3BE8C"
+
+[[settings]]
+scope = "constant.numeric, constant.language, constant.character"
+[settings.settings]
+foreground = "#D08770"
+
+[[settings]]
+scope = "keyword, storage, entity.name.tag"
+[settings.settings]
+foreground = "#B48EAD"
+
+[[settings]]
+scope = "entity.name.function, support.function, variable.function"
+[settings.settings]
+foreground = "#81A1C1"
+
+[[settings]]
+scope = "entity.name.type, support.type, entity.name.class"
+[settings.settings]
+foreground = "#EBCB8B"
+
+[[settings]]
+scope = "variable, identifier"
+[settings.settings]
+foreground = "#D8DEE9"
+
+[[settings]]
+scope = "punctuation, meta.structure.dictionary, meta.structure.array"
+[settings.settings]
+foreground = "#88C0D0"
+
+[[settings]]
+scope = "invalid, invalid.illegal"
+[settings.settings]
+foreground = "#BF616A"
+fontStyle = "bold"

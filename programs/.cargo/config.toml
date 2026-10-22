@@ -1,0 +1,3 @@
+[build]
+# Keep build artifacts from nested Rust projects in one repository-wide folder:
+target-dir = "../build/target"

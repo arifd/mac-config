@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+################################################################################
+# fif - Find In Files                                                          #
+#                                                                              #
+# Search file contents recursively using ripgrep and interactively
+# select matching files with fzf.
+#
+# Includes hidden files (excluding .git) and displays a preview
+# of matching lines with color highlighting, line numbers, and
+# surrounding context.
+#
+# Usage: fif <pattern>
+
+
+
+if (($# == 0)); then
+  printf 'Usage: %s <pattern>\n' "${0##*/}" >&2
+  exit 1
+fi
+
+export FIF_PATTERN="$1"
+
+rg \
+  --hidden \
+  --glob '!.git' \
+  --files-with-matches \
+  --no-messages \
+  -- "$FIF_PATTERN" |
+  fzf \
+    --scheme=path \
+    --header='ENTER: select file | ESC: cancel' \
+    --preview='rg --color=always --line-number --context 10 -- "$FIF_PATTERN" {}' \
+    --preview-window='up:60%:wrap' \
+  || exit 0

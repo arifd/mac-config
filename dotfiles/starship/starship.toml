@@ -1,0 +1,191 @@
+# ─────────────────────────────────────
+# Starship • Nord × Catppuccin
+# ─────────────────────────────────────
+
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+palette = "nord"
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$python\
+$lua\
+$nodejs\
+$golang\
+$haskell\
+$rust\
+$ruby\
+$package\
+$aws\
+$docker_context\
+$jobs\
+$cmd_duration\
+$line_break\
+$character"""
+
+# ─────────────────────────────────────
+# Directory
+# ─────────────────────────────────────
+
+[directory]
+style = "bold dark_blue"
+format = "[$path]($style) "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = false
+read_only = " 󰌾"
+
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Downloads" = " "
+# "Music" = " "
+# "Pictures" = " "
+# "Developer" = "󰲋 "
+# "Projects" = "󰲋 "
+
+# ─────────────────────────────────────
+# Git
+# ─────────────────────────────────────
+
+[git_branch]
+symbol = " "
+style = "green"
+format = "[on](white) [$symbol$branch]($style) "
+
+[git_status]
+style = "green"
+format = '([$all_status$ahead_behind]($style) )'
+
+conflicted = "[~${count}](red) "
+ahead = "[⇡${count}](teal) "
+behind = "[⇣${count}](orange) "
+diverged = "[⇕](purple) "
+untracked = "[?${count}](yellow) "
+stashed = "[*${count}](purple) "
+modified = "[!${count}](orange) "
+staged = "[+${count}](green) "
+renamed = "[»${count}](blue) "
+deleted = "[✘${count}](red) "
+
+# ─────────────────────────────────────
+# Fill
+# ─────────────────────────────────────
+
+[fill]
+symbol = " • "
+style = "gray"
+
+# ─────────────────────────────────────
+# Languages
+# ─────────────────────────────────────
+
+[python]
+symbol = " "
+style = "teal"
+format = "[$symbol$version( \\($virtualenv\\))]($style) "
+pyenv_version_name = true
+pyenv_prefix = ""
+
+[lua]
+symbol = " "
+style = "blue"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+style = "green"
+format = "[$symbol$version]($style) "
+
+[golang]
+symbol = " "
+style = "teal"
+format = "[$symbol$version]($style) "
+
+[haskell]
+symbol = " "
+style = "purple"
+format = "[$symbol$version]($style) "
+
+[rust]
+symbol = " "
+style = "orange"
+format = "[$symbol$version]($style) "
+
+[ruby]
+symbol = " "
+style = "red"
+format = "[$symbol$version]($style) "
+
+[package]
+symbol = "󰏗 "
+style = "purple"
+format = "[$symbol$version]($style) "
+
+# ─────────────────────────────────────
+# Cloud / Containers
+# ─────────────────────────────────────
+
+[aws]
+symbol = " "
+style = "yellow"
+format = '[$symbol$profile(\[$duration\])]($style) '
+
+[docker_context]
+symbol = " "
+style = "blue"
+format = "[$symbol$context]($style) "
+detect_files = [
+  "docker-compose.yml",
+  "docker-compose.yaml",
+  "compose.yml",
+  "compose.yaml",
+  "Dockerfile",
+]
+
+# ─────────────────────────────────────
+# System
+# ─────────────────────────────────────
+
+[jobs]
+symbol = " "
+style = "red"
+number_threshold = 1
+format = "[$symbol$number]($style) "
+
+[cmd_duration]
+min_time = 500
+style = "yellow"
+format = "[󰔛 $duration]($style) "
+
+# ─────────────────────────────────────
+# Prompt Character
+# ─────────────────────────────────────
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold teal)"
+vimcmd_replace_one_symbol = "[❮](bold purple)"
+vimcmd_replace_symbol = "[❮](bold purple)"
+vimcmd_visual_symbol = "[❮](bold yellow)"
+
+# ─────────────────────────────────────
+# Nord Palette
+# ─────────────────────────────────────
+
+[palettes.nord]
+dark_blue = "#5E81AC"
+blue = "#81A1C1"
+teal = "#88C0D0"
+red = "#BF616A"
+orange = "#D08770"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+purple = "#B48EAD"
+gray = "#434C5E"
+black = "#2E3440"
+white = "#D8DEE9"

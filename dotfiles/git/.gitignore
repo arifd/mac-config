@@ -1,0 +1,18 @@
+# macOS metadata and filesystem artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Icon?
+
+# Personal notes kept alongside repositories
+.notes/
+
+# Zed project-local IDE settings
+.zed/

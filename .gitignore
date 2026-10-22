@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Zed
+.zed/
+
+# Nix build outputs
+result
+result-*
+
+# Local build artefacts
+/build/
+
+# Accidental rust target folders
+target
