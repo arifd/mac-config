@@ -1,0 +1,12 @@
+# macOS:
+.DS_Store
+
+# Nix build outputs:
+result
+result-*
+
+# Swift build artifacts at any depth:
+.build/
+
+# Rust build artifacts at any depth:
+target/

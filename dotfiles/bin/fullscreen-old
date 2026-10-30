@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+################################################################################
+# Sets the currently active macOS window into native full-screen mode.         #
+################################################################################
+
+osascript <<'EOF'
+tell application "System Events"
+    -- Get the currently active application.
+    set frontApp to first application process whose frontmost is true
+
+    -- Get its currently focused window.
+    set frontWindow to value of attribute "AXFocusedWindow" of frontApp
+
+    -- Enter native macOS full-screen mode.
+    set value of attribute "AXFullScreen" of frontWindow to true
+end tell
+EOF

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+################################################################################
+# Remove empty directories from the current directory downward.                #
+#                                                                              #
+# find deletes children before parents, so parents emptied by this pass are    #
+# removed too.                                                                 #
+################################################################################
+
+find . -type d -empty \
+  -not -path './.git' \
+  -not -path './.git/*' \
+  -delete

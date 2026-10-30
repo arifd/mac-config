@@ -1,0 +1,6 @@
+line-length = 80
+
+# Allow HTML inside of Markdown. The assumption is thatI only use it whne I have
+# to anyway.
+[MD033]
+enabled = false

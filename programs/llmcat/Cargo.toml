@@ -1,0 +1,10 @@
+[package]
+name = "llmcat"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ignore = "0.4.25"
+anyhow = "1"
+arboard = "3"
+bytesize = "2.3.1"
