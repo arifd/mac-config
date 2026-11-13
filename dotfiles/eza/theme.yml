@@ -1,0 +1,68 @@
+# Nordish colors adapted from the bat theme in dotfiles/bat/themes/Nordish.toml.
+colourful: true
+
+filekinds:
+  normal:
+    foreground: "#D8DEE9"
+  directory:
+    foreground: "#81A1C1"
+    is_bold: true
+  symlink:
+    foreground: "#88C0D0"
+  executable:
+    foreground: "#A3BE8C"
+  broken_symlink:
+    foreground: "#BF616A"
+    is_bold: true
+
+perms:
+  user_read:
+    foreground: "#EBCB8B"
+  group_read:
+    foreground: "#EBCB8B"
+  other_read:
+    foreground: "#EBCB8B"
+  user_write:
+    foreground: "#BF616A"
+  group_write:
+    foreground: "#BF616A"
+  other_write:
+    foreground: "#BF616A"
+  user_execute_file:
+    foreground: "#A3BE8C"
+  user_execute_other:
+    foreground: "#A3BE8C"
+  group_execute:
+    foreground: "#A3BE8C"
+
+size:
+  number_byte:
+    foreground: "#D08770"
+  number_kilo:
+    foreground: "#D08770"
+  number_mega:
+    foreground: "#D08770"
+  number_giga:
+    foreground: "#D08770"
+  number_huge:
+    foreground: "#D08770"
+
+git:
+  new:
+    foreground: "#A3BE8C"
+  modified:
+    foreground: "#EBCB8B"
+  deleted:
+    foreground: "#BF616A"
+  renamed:
+    foreground: "#81A1C1"
+  conflicted:
+    foreground: "#BF616A"
+
+punctuation:
+  foreground: "#88C0D0"
+date:
+  foreground: "#616E88"
+header:
+  foreground: "#B48EAD"
+  is_bold: true
